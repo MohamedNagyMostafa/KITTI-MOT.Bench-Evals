@@ -46,11 +46,25 @@ We classify the performance of the detector into three categories:
     - **3D Detection**: [**PointRCNN**](https://arxiv.org/abs/1812.04244)    
     
 ## Submission :heavy_check_mark:
+We encourage contributors to push their framework results to the repo to facilitate further research in this area.  Make sure that you consider the following instructions before pushing a merge request. 
+### Location
+You should indicate the correct location for your results based on the type of detectors utilized in the framework. You may consider the following scheme:
 
+1 If the framework employs a mono-detector (Either 2D or 3D), then the results location should be in:
+  - `[~\poor-detectors\..]`: In case you use a 2D detector that performs as sufficiently as *YOLOv3* or less.
+  - `[~\moderate-detectors\..]`: In case you use an advanced 2D detector such as RCC or 3D detector with good performance. 
+2. If the framework employs a multi-detector (2D and 3D), then the results should be inside the `[~\sophisticated-detectors\..]` folder.
 
-## References
+The pushed folder should be named based on the utilized detectors, ex: `both_2d_rcc_3d_pointgnn`, which means the framework utilizes the *RCC* detector for 2D and *PointGNN* for 3D. In case of poor and moderate detectors, you may create a new folder named with detector/s that you have used.
 
+**Note: You may push your results directly into a folder if it exists, and your full submission should be located as follow: `[DETECTOR_PERFORMANCE]/[DETECTOR_NAME]/[2d_xxx_3d_xxx]/data/`. We expect to have all KITTI training+evaluation streams seperately as shown [HERE](https://github.com/MohamedNagyMostafa/KITTI-MOT.Bench-Evals/tree/master/sophisticated-detectors/both_2d_rrc_3d_pointgnn/deep/data), except stream `0017`.** 
+
+### Format
+The data format should follow KITTI label format shown in this [Link](https://github.com/bostondiditeam/kitti/blob/master/resources/devkit_object/readme.txt) with an additiona column at the beginning for the frame id, check out below table for more illustration. 
+
+|frame|type|truncated|occluded|alpha|2d_bbox|3d_dimensions|3d_location|rotation_y|score|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|Car|0|0|-1|(255,182,0,23)|(1.24,2,3,0.9)|(2.3,5.9,1.2)|-35|0
 
 # Citation
-
 **TBA**
