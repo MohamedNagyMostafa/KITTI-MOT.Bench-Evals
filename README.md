@@ -66,5 +66,20 @@ The data format should follow KITTI label format shown in this [Link](https://gi
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |0|Car|0|0|-1|(255,182,0,23)|(1.24,2,3,0.9)|(2.3,5.9,1.2)|-35|0
 
+### Steps
+1. Use the following command load the repo locally.
+```
+git clone https://github.com/MohamedNagyMostafa/KITTI-MOT.Bench-Evals
+```
+2. Add your framework's results as illusterated above.
+3. Push your work to the repo using the following command.
+```
+git add .
+git commit -m "[WRITE_YOUR_MSG]"
+git push origin master
+```
+
+We are going to review your submission and evaluate the performance using [**KITTI-Evaluation**](https://github.com/JonathonLuiten/TrackEval) tools. If your submission has no issue, we will accept your merge request.
+  
 # Citation
 **TBA**
