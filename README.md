@@ -1,5 +1,7 @@
 # Occlusion Simulation Evaluation Using Various Detection Distortion :heavy_check_mark: 
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CLDxqTojz6o/0.jpg)](https://youtu.be/CLDxqTojz6o)
+
 This repository presents the results of occlusion simulation experiments with high, moderate, and low temporal detection distortion conducted as part of the research work "[DFR-FastMOT: Detection Failure Resistant Tracker for Fast Multi-Object Tracking Based on Sensor Fusion.](https://arxiv.org/abs/2302.14807)" The simulation mimics occlusion phenomena by testing the stability of multi-object tracking (MOT) frameworks in different detection conditions.
 
 ## Introduction
