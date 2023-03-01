@@ -1,26 +1,32 @@
-# KITTI-MOT.Bench-Evals
-*KITTI evaluation results for multi-object tracking using detectors with different performances.*:heavy_check_mark:
+# Occlusion Simulation Evaluation Using Various Detection Distortion :heavy_check_mark: 
+
+This repository presents the results of occlusion simulation experiments with high, moderate, and low temporal detection distortion conducted as part of the research work "[DFR-FastMOT: Detection Failure Resistant Tracker for Fast Multi-Object Tracking Based on Sensor Fusion.](https://arxiv.org/abs/2302.14807)" The simulation mimics occlusion phenomena by testing the stability of multi-object tracking (MOT) frameworks in different detection conditions.
 
 ## Introduction
-The purpose of this repo supports further works in multi-object tracking (MOT) to compare their work with recent benchmark models by sharing tracking results for individual ***KITTI training+evaluation*** streams. The comparison will provide an initial insight into the stability of the tracking performance of a framework. The repo includes tracking results of [(EagerMOT, 2021)](https://github.com/aleksandrkim61/EagerMOT) and [(DeepFusionMOT, 2022)](https://github.com/wangxiyang2022/DeepFusionMOT), including our framework [(DFR-FastMOT, 2023)](https://github.com/MohamedNagyMostafa/DFR-FastMOT), and *we appreciate your contribution by providing results of your/other frameworks*. It also supports different detection performances *(Poor/Moderate/High)*, so other researchers can measure the dependency of their tracking solution on the detection accuracy. 
 
-**Note: This evaluation considers Cars only.**
+This repository aims to support further MOT research by sharing tracking results for individual KITTI training and evaluation streams. Researchers can compare their MOT work with recent benchmark models, including [(EagerMOT)](https://github.com/aleksandrkim61/EagerMOT) (2021), [(DeepFusionMOT)](https://github.com/wangxiyang2022/DeepFusionMOT) (2022), and [(DFR-FastMOT)](https://github.com/MohamedNagyMostafa/DFR-FastMOT) (2023) in the provided streams. We encourage researchers to contribute their tracking results of other frameworks. The repository also supports various detection performances (Poor/Moderate/High) so that researchers can measure their tracking solutions' dependency on detection accuracy.
+
+**Please note that this evaluation focuses on car objects only.**
 
 
 ## Description
 ### Frameworks:
-We provide output results of two recent MOT frameworks ([(**EagerMOT**, 2021)](https://arxiv.org/abs/2104.14682) and [(**DeepFusionMOT**, 2022)](https://arxiv.org/abs/2202.12100), **(DFR-FastMOT, 2023)**), and we highly recommend that further researchers share their results by following the instructions mentioned in the *Submission Section*.
-The frameworks are shared in the repo as follows:
-- `~/[DETECTOR_PERFORMANCE]/deep/data`: refers to [(DeepFusionMOT, 2022)](https://github.com/wangxiyang2022/DeepFusionMOT) framework.
-- `~/[DETECTOR_PERFORMANCE]/eager/data`: refers to [(EagerMOT, 2021)](https://github.com/aleksandrkim61/EagerMOT) framework.
-- `~/[DETECTOR_PERFORMANCE]/our/data`: refers to [(DFR-FastMOT, 2023)](https://github.com/MohamedNagyMostafa/DFR-FastMOT) framework.
 
-The folders contain all KITTI streams, 21 streams, except stream 0017 since it does not involve any Car object. 
+The repository provides the output results of three recent MOT frameworks: [EagerMOT](https://arxiv.org/abs/2104.14682) (2021), [DeepFusionMOT](https://arxiv.org/abs/2202.12100) (2022), and [DFR-FastMOT](https://arxiv.org/abs/2302.14807) (2023). Researchers can share their results by following the instructions mentioned in the submission section. The repository includes the following folders:
+
+- `~/[DETECTOR_PERFORMANCE]/deep/data`: Output results of DeepFusionMOT (2022).
+- `~/[DETECTOR_PERFORMANCE]/eager/data`: Output results of EagerMOT (2021).
+- `~/[DETECTOR_PERFORMANCE]/our/data`: Output results of DFR-FastMOT (2023).
+
+The folders contain all KITTI streams, except stream 0017, which does not involve any car object.
 
 ### Evaluation tool:
-We evaluate frameworks' performance using [**KITTI-Evaluation**](https://github.com/JonathonLuiten/TrackEval) tools and update the results on the table below accordingly.  
-![Screenshot from 2022-08-24 14-15-42](https://user-images.githubusercontent.com/20774864/186395095-1e00c891-a000-4852-add4-d9f685a1a795.png)
-**Note: Red color :red_circle: indicates the highest score per metric overall in the table, and bold styles :black_circle: indicate the highest score per metric in a block (For particular detectors)**
+
+We evaluate the performance of the MOT frameworks using the [**KITTI-Evaluation**](https://github.com/JonathonLuiten/TrackEval) tools and update the results in the table accordingly. **Note: Red color :red_circle: indicates the overall highest score per metric, and bold styles :black_circle: indicate the highest score per metric in a block (For particular detectors)**
+
+  
+![1](https://user-images.githubusercontent.com/20774864/222247364-9613992e-e374-493f-a011-abf05ec2e66d.png)
+
 
 
 ### Detection Models:
@@ -82,4 +88,25 @@ git push origin master
 We are going to review your submission and evaluate the performance using [**KITTI-Evaluation**](https://github.com/JonathonLuiten/TrackEval) tools. If your submission has no issue, we will accept your merge request.
   
 # Citation
-**TBA**
+Kindly cite the work if you find the repository useful for the research.
+
+```
+@misc{https://doi.org/10.48550/arxiv.2302.14807,
+  doi = {10.48550/ARXIV.2302.14807},
+  
+  url = {https://arxiv.org/abs/2302.14807},
+  
+  author = {Nagy, Mohamed and Khonji, Majid and Dias, Jorge and Javed, Sajid},
+  
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {DFR-FastMOT: Detection Failure Resistant Tracker for Fast Multi-Object Tracking Based on Sensor Fusion},
+  
+  publisher = {arXiv},
+  
+  year = {2023},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+```
