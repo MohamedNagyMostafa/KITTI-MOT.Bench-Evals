@@ -93,22 +93,15 @@ We are going to review your submission and evaluate the performance using [**KIT
 Kindly cite the work if you find the repository useful for the research.
 
 ```
-@misc{https://doi.org/10.48550/arxiv.2302.14807,
-  doi = {10.48550/ARXIV.2302.14807},
-  
-  url = {https://arxiv.org/abs/2302.14807},
-  
-  author = {Nagy, Mohamed and Khonji, Majid and Dias, Jorge and Javed, Sajid},
-  
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {DFR-FastMOT: Detection Failure Resistant Tracker for Fast Multi-Object Tracking Based on Sensor Fusion},
-  
-  publisher = {arXiv},
-  
-  year = {2023},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
+@INPROCEEDINGS{10160328,
+  author={Nagy, Mohamed and Khonji, Majid and Dias, Jorge and Javed, Sajid},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={DFR-FastMOT: Detection Failure Resistant Tracker for Fast Multi-Object Tracking Based on Sensor Fusion}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={827-833},
+  doi={10.1109/ICRA48891.2023.10160328}}
+
 
 ```
